@@ -1,9 +1,11 @@
-package com.code.springdemo;
+package com.code.springdemo.coach;
 
-public class SwimCoach implements ICoach {
-    private IFortuneService fortuneService;
+import com.code.springdemo.fortune.FortuneService;
 
-    public SwimCoach(IFortuneService fortuneService) {
+public class SwimCoach implements Coach {
+    private FortuneService fortuneService;
+
+    public SwimCoach(FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
 

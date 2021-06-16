@@ -1,4 +1,4 @@
-package com.code.springdemo;
+package com.code.springdemo.fortune;
 
 import org.springframework.stereotype.Component;
 
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Random;
 
 @Component
-public class FileFortuneService implements IFortuneService {
+public class FileFortuneService implements FortuneService {
 
     private List<String> theFortunes;
     private Random rand = new Random();

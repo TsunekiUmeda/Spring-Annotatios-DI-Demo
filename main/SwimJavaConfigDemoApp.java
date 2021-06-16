@@ -1,14 +1,16 @@
-package com.code.springdemo;
+package com.code.springdemo.main;
 
+import com.code.springdemo.coach.Coach;
+import com.code.springdemo.config.SportConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class SwimJavaConfigDemoApp {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SportConfig.class);
 
-        ICoach theICoach = context.getBean("swimCoach", ICoach.class);
-        System.out.println(theICoach.getDailyWorkout());
-        System.out.println(theICoach.getDailyFortune());
+        Coach theCoach = context.getBean("swimCoach", Coach.class);
+        System.out.println(theCoach.getDailyWorkout());
+        System.out.println(theCoach.getDailyFortune());
 
         context.close();
     }

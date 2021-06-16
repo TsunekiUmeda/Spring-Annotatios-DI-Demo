@@ -1,4 +1,4 @@
-package com.code.springdemo;
+package com.code.springdemo.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -13,7 +13,7 @@ import java.util.logging.SimpleFormatter;
 
 @Configuration
 @PropertySource("classpath:mylogger.properties")
-public class MyLoggerConfig {
+public class LoggerConfig {
     @Value("${root.logger.level}")
     private String rootLoggerLevel;
 
