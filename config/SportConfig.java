@@ -7,9 +7,11 @@ import com.code.springdemo.fortune.SadFortuneService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @ComponentScan("com.code.springdemo")
+@PropertySource("classpath:com/code/springdemo/sport.properties")
 public class SportConfig {
 
     //define bean for out sad fortune service
